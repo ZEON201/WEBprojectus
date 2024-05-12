@@ -17,12 +17,12 @@ def about(request):
 def countries_list(request):
     countries = CountriesList.objects.all()
     flags = Image.objects.all()
-    return render(request, 'main/countries_list.html', context={"countries": countries, "flags": flags})
+    return render(request, 'main/elements_list.html', context={"countries": countries, "flags": flags})
 
 
 def countries_descriptions(request):
     countries = CountriesList.objects.all()
-    return render(request, 'main/countries_descriptions.html', context={"countries": countries})
+    return render(request, 'main/elements_descriptions.html', context={"countries": countries})
 
 
 def create(request):
