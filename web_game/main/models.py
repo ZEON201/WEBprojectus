@@ -13,16 +13,16 @@ class Task(models.Model):
         verbose_name_plural = 'Задачи'
 
 
-# class CountriesList(models.Model):
+# class Elementslist(models.Model):
 #
-#     country = models.CharField('Название Страны', max_length=50)
+#     country = models.CharField('Название элемента', max_length=50)
 #     capital = models.CharField('Столица', max_length=50)
 #     description = models.TextField('Описание страны')
 #
 #     def __str__(self):
 #         return self.country
 
-class CountriesList(models.Model):
+class ElementsList(models.Model):
     image = models.ImageField(upload_to='images', default='null_flag')
     country = models.CharField('Название Страны', max_length=50)
     capital = models.CharField('Столица', max_length=50)
