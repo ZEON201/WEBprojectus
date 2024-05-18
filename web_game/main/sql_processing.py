@@ -5,9 +5,9 @@ class DatabaseConnection:
     def __init__(self, db_name='Countries.db'):
         self.conn = sqlite3.connect(db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
-        self.cursor.execute(''' CREATE TABLE IF NOT EXISTS 
+        self.cursor.execute(""" CREATE TABLE IF NOT EXISTS 
                 Countries_list(OperationID INTEGER PRIMARY 
-                KEY AUTOINCREMENT, CountryName TEXT, CapitalCity TEXT, Description TEXT)''')
+                KEY AUTOINCREMENT, CountryName TEXT, CapitalCity TEXT, Description TEXT)""")
         self.conn.commit()
 
     def execute_request(self, request, params=None):

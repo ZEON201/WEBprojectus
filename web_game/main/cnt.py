@@ -1,4 +1,4 @@
-from main.sql_processing import DatabaseConnection
+from web_game.main.sql_processing import DatabaseConnection
 
 db = DatabaseConnection()
 
@@ -20,4 +20,4 @@ def get_cnt_for_table():
 
 
 print(get_cnt_for_table())
-# add_a_cnt("франция", 'париж','Описание3')
+
