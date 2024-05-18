@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block page-title %}
+Введите столицу этой страны:</br>
+{{ question }}
+{% endblock %}
+
+{% block page-lead %}
+Вопрос {{round}} из 10
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        <form id = "question-form"  method="post">
+            {% csrf_token %}
+
+            {{ form.answer }}<br>
+
+            <button type = "submit" class  = "btn btn-success">
+                Ответить
+            </button>
+        </form>
+    </div>
+
+
+
+
+
+{% endblock %}
+

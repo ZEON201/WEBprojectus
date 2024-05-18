@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block page-title %}
+   Результаты теста
+{% endblock %}
+
+{% block page-lead %}
+Правильных ответов: {{score}}</br>
+Процент верных ответов: {{score_percent}}%
+{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-dark">
+    Вернуться на главную страницу
+</a>
+{% endblock %}
+

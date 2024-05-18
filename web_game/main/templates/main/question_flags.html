@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block page-title %}
+Какой стране принадлежит этот флаг?</br>
+<img width="200" height="150" class="rounded" src='{{ question.image.url }}'/>
+{% endblock %}
+
+{% block page-lead %}
+Вопрос {{round}} из 10
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        <form id = "question-form"  method="post">
+            {% csrf_token %}
+
+            {{ form.answer }}<br>
+
+            <button type = "submit" class  = "btn btn-success">
+                Ответить
+            </button>
+        </form>
+    </div>
+{% endblock %}
+
